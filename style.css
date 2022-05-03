@@ -6,23 +6,8 @@
     --headings-color: #132640;
     --text-color: #626262;
     --accent-color: #D92938;
+    --dark-mode-text-color: #fff;
 }
-
-  /* body {
-    --bg-color: white; 
-    --text-color: black;
-  
-    background-color: var(--bg-color);
-    color: var(--text-color);
-  } */
-  
-  /* If the user's preferred color scheme is dark */
-  /* @media screen and (prefers-color-scheme: dark) {
-    body {
-      --bg-color: black;
-      --text-color: white;
-    }
-  } */
 
 
 /* || Reset Style */
@@ -113,6 +98,11 @@ body {
     background-color: var(--primary-color);
 }
 
+body.dark-mode {
+    --primary-color: #132640;
+    --text-color: #fff;
+}
+
 @media screen and (min-width: 1200px) {
     body {
         width: 75%;
@@ -134,6 +124,10 @@ a:hover, span {
     color: var(--accent-color);
 }
 
+body.dark-mode a:hover, span {
+    color: var(--accent-color);
+}
+
 h1 {
     font-size: 2rem;
     margin-bottom: 3rem;
@@ -152,6 +146,12 @@ h3 {
 
 h1, h2, h3 {
     color: var(--headings-color);
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: var(--dark-mode-text-color);
 }
 
 @media screen and (min-width: 1200px) {
@@ -181,7 +181,6 @@ textarea {
 }
 
 
-
 /* || Header: logo, navbar */
 
 #header {
@@ -207,9 +206,46 @@ textarea {
   height: auto;
 }
 
+.btns-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media screen and (min-width: 1200px) {
+    .switch-mode {
+        margin-top: 5px;
+        margin-right: 25px;
+    }
+}
+
+.switch-mode__btn {
+    padding: 5px;
+    color: var(--secondary-color);
+    background-color: transparent;
+}
+
+.switch-mode__btn--light {
+    display: none;
+}
+
+body.dark-mode .switch-mode__btn--light {
+    display: block;
+    color: var(--dark-mode-text-color);
+}
+
+.switch-mode__btn--dark {
+    display: block;
+}
+
+body.dark-mode .switch-mode__btn--dark {
+    display: none;
+}
+
 .menu-btn {
     color: var(--secondary-color);
     background-color: var(--primary-color);
+    order:2
 }
 
 @media screen and (min-width: 1200px) {
@@ -318,6 +354,10 @@ textarea {
     transition: color 1s;
 }
 
+body.dark-mode .main-nav__link {
+    color: var(--dark-mode-text-color);
+    transition: color 1s;
+}
 
 /* || Main Content Style  */
 
@@ -386,6 +426,11 @@ textarea {
 
 .hero-action__contact-btn:hover {
     color:#fff;
+    background-color: var(--secondary-color);
+}
+
+body.dark-mode .hero-action__contact-btn:hover {
+    color: var(--dark-mode-text-color);
     background-color: var(--secondary-color);
 }
 
@@ -464,6 +509,14 @@ textarea {
     }
 }
 
+body.dark-mode .hero-social__link {
+    color: var(--dark-mode-text-color);
+}
+
+body.dark-mode .hero-social__link:hover{
+    color: var(--accent-color);
+}
+
 /* || About Section */
 @media screen and (min-width: 1200px) {
     #about {
@@ -514,6 +567,10 @@ textarea {
 
 .about-article__item {
     padding: 0.5rem 0;
+}
+
+body.dark-mode .about-article__item {
+    color: var(--dark-mode-text-color);
 }
 
 .about-article__strong {
@@ -640,8 +697,14 @@ textarea {
 
 .portfolio-card__project-img {
     max-width: 100%;
+    width: 450px;
     height: auto;
     border-radius: 10px;
+}
+
+.portfolio-card__img-section {
+    display: flex;
+    justify-content: center;
 }
 
 @media screen and (min-width: 1200px) {
@@ -694,6 +757,10 @@ textarea {
     .portfolio-card__link {
         font-size: 1.2rem;
     }
+}
+
+body.dark-mode .portfolio-card__link:hover {
+    color: var(--dark-mode-text-color);
 }
 
 @media screen and (min-width: 1200px) {
@@ -757,6 +824,10 @@ textarea {
     }
 }
 
+body.dark-mode .contact-details__link {
+    color: var(--dark-mode-text-color);
+}
+
 .contact-details__social-links {
     display: flex;
     justify-content: space-around;
@@ -811,10 +882,28 @@ textarea {
     text-transform: uppercase;
 }
 
+body.dark-mode .input-group__label,
+body.dark-mode .input-group__input,
+body.dark-mode .contact-details__submit-btn {
+    color: var(--dark-mode-text-color);
+}
+
+body.dark-mode .contact-details__submit-btn {
+    border: 2px solid var(--dark-mode-text-color);
+}
+
+body.dark-mode .contact-details__submit-btn:hover {
+    border: 2px solid var(--accent-color);
+    text-transform: uppercase;
+}
+
 #footer {
     color: #132640;
     text-align: center;
     padding: 1.5rem 0;
 }
 
+body.dark-mode #footer {
+    color: var(--dark-mode-text-color);
+}
 

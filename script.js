@@ -7,11 +7,9 @@ const $navbar = document.querySelector('#navbar');
 const $mobileNavbar = document.querySelector('#mobile-navbar');
 const $mobileNavLinks = document.querySelectorAll('.mobile-nav__link');
 
-// const $portfolioCardsOdd = document.querySelectorAll('.portfolio-card:nth-child(odd)');
-
-// $portfolioCardsOdd.forEach(oddCard => {
-//     oddCard.classList.add('portfolio-card--odd');
-// })
+const $lightModeBtn = document.querySelector('.switch-mode__btn--light');
+const $darkModeBtn = document.querySelector('.switch-mode__btn--dark');
+const $switchMode = document.querySelector('.switch-mode');
 
 $menuBtn.addEventListener('click', displayMenu);
 function displayMenu() {
@@ -33,8 +31,12 @@ function checkMediaQuery($mediaQuery) {
     if($mediaQuery.matches) {
         $closeMenuBtn.style.display="none";
         $mobileNavbar.classList.remove('mobile-nav--active');
-    } else if(!$mediaQuery.matches && $mobileNavbar.classList.contains('.mobile-nav--active')) {
+    } else if(!$mediaQuery.matches && $mobileNavbar.classList.contains('mobile-nav--active')) {
         $closeMenuBtn.style.display="block";
     }
 }
 
+$switchMode.addEventListener('click', changeMode);
+function changeMode() {
+    document.body.classList.toggle("dark-mode");
+}

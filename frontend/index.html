@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Professional information about me and showcase of my work.">
+    <meta name="author" content="Brindusa Melinte">
+    <meta name="keywords" content="HTML, CSS, JavaScript, NodeJS, ExpressJS">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfolio Projects- Brindusa Melinte</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+
+    <script src="https://kit.fontawesome.com/669ca33eac.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header id="header">
+        <div class="logo">
+            <a href="#"><img class="logo__img" src="./images/PersonalPortfolio-Logo.svg" alt="Brindusa Melinte Logo" width="350" height="75"></a>
+        </div>
+        <button id="menu-btn" class="menu-btn menu-btn__open" type="button"><i class="fa-solid fa-bars fa-xl"></i></button>
+        <nav id="navbar" class="main-nav">
+            <ul id="item-list" class="main-nav__list">
+                <li class="main-nav__item">
+                    <a href="#about" class="main-nav__link">About</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#resume" class="main-nav__link">Resume</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#portfolio" class="main-nav__link">Portfolio</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#contact" class="main-nav__link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="btns-wrapper">
+            <div class="switch-mode">
+                <button class="switch-mode__btn switch-mode__btn--light" type="button"><i class="fa-solid fa-sun fa-lg"></i></button>
+                <button class="switch-mode__btn switch-mode__btn--dark" type="button"><i class="fa-solid fa-moon fa-lg"></i></button>
+            </div>
+            <div id="cv-btn" class="cv-btn">
+                <a class="cv-btn__link" href="./CV/CV.odt" download="Brindusa Melinte CV"><strong>Download <span class="cv-btn__span">CV</span></strong><i class="fa-solid fa-download"></i></a>
+            </div>
+        </div>
+        <button id="close-menu-btn" class="menu-btn menu-btn__close" type="button"><i class="fa-solid fa-xmark fa-2xl"></i></i></button>
+        <nav id="mobile-navbar" class="mobile-nav">
+            <ul id="mobile-item-list" class="mobile-nav__list">
+                <li class="mobile-nav__item">
+                    <a href="#about" class="mobile-nav__link">About</a>
+                </li>
+                <li class="mobile-nav__item">
+                    <a href="#resume" class="mobile-nav__link">Resume</a>
+                </li>
+                <li class="mobile-nav__item">
+                    <a href="#portfolio" class="mobile-nav__link">Portfolio</a>
+                </li>
+                <li class="mobile-nav__item">
+                    <a href="#contact" class="mobile-nav__link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main id="main" class="main">
+        <section id="hero" class="main__section">
+            <header class="hero-header">
+                <h2>Hello, I Am</h2>
+                <h1>Brindusa Melinte</h1>
+                <p>A front-end developer labore et dolore magna aliqua.</p>
+                <p>Lorem ipsum dolor sit amet, communication adipisicing elit, helpful eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </header>
+            <div id="action-links" class="hero-action">
+                <a id="contact-link" class="hero-action__contact-btn" href="#contact"><strong>Contact Me</strong></a>
+                <div class="hero-action__svg-wrapper">
+                    <svg height="44" width="120" xmlns="http://www.w3.org/2000/svg">
+                        <rect class="hero-action__svg-shape" height="44" width="120"/>
+                        <div class="hero-action__svg-link"><a id="portfolio-link" class="hero-action__portfolio-link" href="#portfolio"><strong>See My Work</strong></a></div>
+                    </svg>
+                </div>
+            </div>
+            <div id="social-links" class="hero-social">
+                <a class="hero-social__link" href="" target="_blank">
+                    <i class="fa-brands fa-linkedin fa-2xl"></i>
+                </a>
+                <a class="hero-social__link" href="" target="_blank">
+                    <i class="fa-brands fa-github-square fa-2xl"></i>
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="main__section">
+            <figure class="about-figure">
+                <img id="my-picture" class="about-figure__img" src="./images/MyPic.jpeg" alt="My Picture">
+            </figure>
+            <article id="about-article" class="about-article">
+                <header id="about-text" class="about-article__header">
+                    <h2>About Me</h2>
+                    <p>Lorem ipsum dolor sit amet, communication adipisicing elit, helpful eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <p>Lorem ipsum dolor sit amet, communication adipisicing elit, helpful eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud sence of humour ullamco laboris nisi ut honest ea commodo consequat.  </p>
+                </header>
+                <div id="about-list" class="about-article__list">
+                    <ul class="about-article__items">
+                        <li class="about-article__item"><strong class="about-article__strong">Freelance: </strong>Eiusmod</li>
+                        <li class="about-article__item"><strong class="about-article__strong">Address: </strong>Lorem ipsum dolor</li>
+                        <li class="about-article__item"><strong class="about-article__strong">Phone: </strong>+40722432384</li>
+                        <li class="about-article__item"><strong class="about-article__strong">E-mail: </strong>brindusa.melinte@gmail.com</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+
+        <section id="resume" class="main__section">
+            <header id="resume-text" class="resume-header">
+                <h2>My Resume</h2>
+                <p>Lorem ipsum dolor sit amet, communication adipisicing elit, helpful eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud sence of humour ullamco laboris nisi ut honest ea commodo consequat.</p>
+            </header>
+            <section id="resume-history" class="resume-history">
+               <article id="resume-employment" class="resume-history__article">
+                    <h2>Employment</h2>
+                    <div class="resume-history__article-details">
+                        <h3>Lorem Ipsum</h3>
+                        <p class="resume-history__article-text"><small>2006 - 2010</small></p>
+                        <p class="resume-history__article-text">Lorem ipsum dolor sit amet, consecte tur adipisicing elit.Ut enim ad minim veniam, quis nostrud sence of humour ullamco.</p>
+                    </div>
+                    <div class="resume-history__article-details">
+                        <h3>Lorem Ipsum</h3>
+                        <p class="resume-history__article-text"><small>2006 - 2010</small></p>
+                        <p class="resume-history__article-text">Lorem ipsum dolor sit amet, consecte tur adipisicing elit.</p>
+                    </div>
+                    <div class="resume-history__article-details">
+                        <h3>Lorem Ipsum</h3>
+                        <p class="resume-history__article-text"><small>2006 - 2010</small></p>
+                        <p class="resume-history__article-text">Lorem ipsum dolor sit amet, consecte tur adipisicing elit.Ut enim ad minim veniam, quis nostrud sence of humour ullamco laboris nisi.</p>
+                    </div>
+                </article>
+                <article id="resume-education" class="resume-history__article">
+                    <h2>Education</h2>
+                    <div class="resume-history__article-details">
+                        <h3>Lorem Ipsum School</h3>
+                        <p class="resume-history__article-text"><small>2006 - 2010</small></p>
+                        <p class="resume-history__article-text">Lorem ipsum dolor sit amet, consecte tur adipisicing elit.</p>
+                    </div>
+                    <div class="resume-history__article-details">
+                        <h3>Lorem Ipsum School</h3>
+                        <p class="resume-history__article-text"><small>2006 - 2010</small></p>
+                        <p class="resume-history__article-text">Lorem ipsum dolor sit amet, consecte tur adipisicing elit.Ut enim ad minim veniam, quis nostrud sence of humour ullamco laboris nisi ut honest ea commodo consequat. </p>
+                    </div>
+                    <div class="resume-history__article-details">
+                        <h3>Lorem Ipsum School</h3>
+                        <p class="resume-history__article-text">Lorem ipsum dolor sit amet, consecte tur adipisicing elit.</p>
+                    </div>
+                </article>
+            </section>
+            <section id="resume-skills" class="resume-skills">
+                    <h2>What I have learned so far...</h2>
+                    <ul class="resume-skills__list">
+                        <li class="resume-skills__item"><img class="resume-skills__img" src="./images/code-solid.svg" alt="HTML" width="35px" height="35px"></li>
+                        <li class="resume-skills__item"><img class="resume-skills__img" src="./images/css3-alt-brands.svg" alt="CSS" width="35px" height="35px"></li>
+                        <li class="resume-skills__item"><img class="resume-skills__img" src="./images/bootstrap-brands.svg" alt="Bootstrap" width="35px" height="35px"></li>
+                        <li class="resume-skills__item"><img class="resume-skills__img" src="./images/js-square-brands.svg" alt="JavaScript" width="35px" height="35px"></li>
+                        <li class="resume-skills__item"><img class="resume-skills__img" src="./images/react-brands.svg" alt="React" width="35px" height="35px"></li>
+                        <li class="resume-skills__item"><img class="resume-skills__img" src="./images/node-brands.svg" alt="Node.js" width="35px" height="35px"></li>
+                        <li class="resume-skills__item"><img class="resume-skills__img" src="./images/php-brands.svg" alt="PHP" width="35px" height="35px"></li>
+                        <li class="resume-skills__item"><img class="resume-skills__img" src="./images/wordpress-brands.svg" alt="Wordpress" width="35px" height="35px"></li>
+                    </ul>
+            </section>
+        </section>
+
+        <section id="portfolio" class="main__section">
+            <h2>Portfolio</h2>
+            <article class="portfolio-card">
+                <section class="portfolio-card__details-section">
+                    <header class="portfolio-card__header">
+                        <h3>Project Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consecte tur adipisicing elit.Aliquam id turpis et urna viverra ornare. Vivamus mollis vel nulla vel tempor.</p>
+                    </header>
+                    <div class="portfolio-card__techs">
+                        <h3>Technologies Used</h3>
+                        <ul class="portfolio-card__list">
+                            <li class="portfolio-card__item"><img class="portfolio-card__tech-img" src="./images/code-solid.svg" alt="HTML" width="35px" height="35px"></li>
+                            <li class="portfolio-card__item"><img class="portfolio-card__tech-img" src="./images/css3-alt-brands.svg" alt="CSS" width="35px" height="35px"></li>
+                            <li class="portfolio-card__item"><img class="portfolio-card__tech-img" src="./images/bootstrap-brands.svg" alt="Bootstrap" width="35px" height="35px"></li>
+                        </ul>
+                    </div>
+                    <div class="portfolio-card__links-btn">
+                        <a class="portfolio-card__link" href="" target="_blank"><strong>See Live</strong></a>
+                        <a class="portfolio-card__link" href="" target="_blank"><strong>Source Code</strong></a>
+                    </div>
+                </section>
+                <section class="portfolio-card__img-section">
+                    <a href="#" target="_blank"><img class="portfolio-card__project-img" src="./images/default-img.png" alt=""></a>
+                </section>
+            </article>
+            <article class="portfolio-card">
+                <section class="portfolio-card__details-section">
+                    <header class="portfolio-card__header">
+                        <h3>Project Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consecte tur adipisicing elit.Aliquam id turpis et urna viverra ornare. Vivamus mollis vel nulla vel tempor.</p>
+                    </header>
+                    <div class="portfolio-card__techs">
+                        <h3>Technologies Used</h3>
+                        <ul class="portfolio-card__list">
+                            <li class="portfolio-card__item"><img class="portfolio-card__tech-img" src="./images/code-solid.svg" alt="HTML" width="35px" height="35px"></li>
+                            <li class="portfolio-card__item"><img class="portfolio-card__tech-img" src="./images/css3-alt-brands.svg" alt="CSS" width="35px" height="35px"></li>
+                            <li class="portfolio-card__item"><img class="portfolio-card__tech-img" src="./images/bootstrap-brands.svg" alt="Bootstrap" width="35px" height="35px"></li>
+                        </ul>
+                    </div>
+                    <div class="portfolio-card__links-btn">
+                        <a class="portfolio-card__link" href="" target="_blank"><strong>See Live</strong></a>
+                        <a class="portfolio-card__link" href="" target="_blank"><strong>Source Code</strong></a>
+                    </div>
+                </section>
+                <section class="portfolio-card__img-section">
+                    <a href="#" target="_blank"><img class="portfolio-card__project-img" src="./images/default-img.png" alt=""></a>
+                </section>
+            </article>
+            <article class="portfolio-card">
+                <section class="portfolio-card__details-section">
+                    <header class="portfolio-card__header">
+                        <h3>Project Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consecte tur adipisicing elit.Aliquam id turpis et urna viverra ornare. Vivamus mollis vel nulla vel tempor.</p>
+                    </header>
+                    <div class="portfolio-card__techs">
+                        <h3>Technologies Used</h3>
+                        <ul class="portfolio-card__list">
+                            <li class="portfolio-card__item"><img class="portfolio-card__tech-img" src="./images/code-solid.svg" alt="HTML" width="35px" height="35px"></li>
+                            <li class="portfolio-card__item"><img class="portfolio-card__tech-img" src="./images/css3-alt-brands.svg" alt="CSS" width="35px" height="35px"></li>
+                            <li class="portfolio-card__item"><img class="portfolio-card__tech-img" src="./images/bootstrap-brands.svg" alt="Bootstrap" width="35px" height="35px"></li>
+                        </ul>
+                    </div>
+                    <div class="portfolio-card__links-btn">
+                        <a class="portfolio-card__link" href="" target="_blank"><strong>See Live</strong></a>
+                        <a class="portfolio-card__link" href="" target="_blank"><strong>Source Code</strong></a>
+                    </div>
+                </section>
+                <section class="portfolio-card__img-section">
+                    <a href="#" target="_blank"><img class="portfolio-card__project-img" src="./images/default-img.png" alt=""></a>
+                </section>
+            </article>
+            <article class="portfolio-card">
+                <section class="portfolio-card__details-section">
+                    <header class="portfolio-card__header">
+                        <h3>Project Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consecte tur adipisicing elit.Aliquam id turpis et urna viverra ornare. Vivamus mollis vel nulla vel tempor.</p>
+                    </header>
+                    <div class="portfolio-card__techs">
+                        <h3>Technologies Used</h3>
+                        <ul class="portfolio-card__list">
+                            <li class="portfolio-card__item"><img class="portfolio-card__tech-img" src="./images/code-solid.svg" alt="HTML" width="35px" height="35px"></li>
+                            <li class="portfolio-card__item"><img class="portfolio-card__tech-img" src="./images/css3-alt-brands.svg" alt="CSS" width="35px" height="35px"></li>
+                            <li class="portfolio-card__item"><img class="portfolio-card__tech-img" src="./images/bootstrap-brands.svg" alt="Bootstrap" width="35px" height="35px"></li>
+                        </ul>
+                    </div>
+                    <div class="portfolio-card__links-btn">
+                        <a class="portfolio-card__link" href="" target="_blank"><strong>See Live</strong></a>
+                        <a class="portfolio-card__link" href="" target="_blank"><strong>Source Code</strong></a>
+                    </div>
+                </section>
+                <section class="portfolio-card__img-section">
+                    <a href="#" target="_blank"><img class="portfolio-card__project-img" src="./images/default-img.png" alt=""></a>
+                </section>
+            </article>
+            <article class="portfolio-card">
+                <section class="portfolio-card__details-section">
+                    <header class="portfolio-card__header">
+                        <h3>Project Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consecte tur adipisicing elit.Aliquam id turpis et urna viverra ornare. Vivamus mollis vel nulla vel tempor.</p>
+                    </header>
+                    <div class="portfolio-card__techs">
+                        <h3>Technologies Used</h3>
+                        <ul class="portfolio-card__list">
+                            <li class="portfolio-card__item"><img class="portfolio-card__tech-img" src="./images/code-solid.svg" alt="HTML" width="35px" height="35px"></li>
+                            <li class="portfolio-card__item"><img class="portfolio-card__tech-img" src="./images/css3-alt-brands.svg" alt="CSS" width="35px" height="35px"></li>
+                            <li class="portfolio-card__item"><img class="portfolio-card__tech-img" src="./images/bootstrap-brands.svg" alt="Bootstrap" width="35px" height="35px"></li>
+                        </ul>
+                    </div>
+                    <div class="portfolio-card__links-btn">
+                        <a class="portfolio-card__link" href="" target="_blank"><strong>See Live</strong></a>
+                        <a class="portfolio-card__link" href="" target="_blank"><strong>Source Code</strong></a>
+                    </div>
+                </section>
+                <section class="portfolio-card__img-section">
+                    <a href="#" target="_blank"><img class="portfolio-card__project-img" src="./images/default-img.png" alt=""></a>
+                </section>
+            </article>
+            <article class="portfolio-card">
+                <section class="portfolio-card__details-section">
+                    <header class="portfolio-card__header">
+                        <h3>Project Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consecte tur adipisicing elit.Aliquam id turpis et urna viverra ornare. Vivamus mollis vel nulla vel tempor.</p>
+                    </header>
+                    <div class="portfolio-card__techs">
+                        <h3>Technologies Used</h3>
+                        <ul class="portfolio-card__list">
+                            <li class="portfolio-card__item"><img class="portfolio-card__tech-img" src="./images/code-solid.svg" alt="HTML" width="35px" height="35px"></li>
+                            <li class="portfolio-card__item"><img class="portfolio-card__tech-img" src="./images/css3-alt-brands.svg" alt="CSS" width="35px" height="35px"></li>
+                            <li class="portfolio-card__item"><img class="portfolio-card__tech-img" src="./images/bootstrap-brands.svg" alt="Bootstrap" width="35px" height="35px"></li>
+                        </ul>
+                    </div>
+                    <div class="portfolio-card__links-btn">
+                        <a class="portfolio-card__link" href="" target="_blank"><strong>See Live</strong></a>
+                        <a class="portfolio-card__link" href="" target="_blank"><strong>Source Code</strong></a>
+                    </div>
+                </section>
+                <section class="portfolio-card__img-section">
+                    <a href="#" target="_blank"><img class="portfolio-card__project-img" src="./images/default-img.png" alt=""></a>
+                </section>
+            </article>
+        </section>
+
+        <section id="contact" class="main__section">
+            <header class="contact-header">
+                <h2>Let's work together...</h2>
+                <p>Lorem ipsum dolor sit amet, consecte tur adipisicing elit.Curabitur rhoncus gravida elit. Mauris vel posuere est, in posuere tellus. Nam sollicitudin commodo orci id cursus.</p>
+            </header>
+            <div class="contact-details">
+                <div class="contact-details__summary">
+                    <div id="contact_details" class="contact-details__summary-links">
+                        <a class="contact-details__link" href="tel:+40722432384">Phone: +40722432384</a>
+                        <a class="contact-details__link" href="mailto:brindusa.melinte@gmail.com">Email: brindusa.melinte@gmail.com</a>
+                    </div> 
+                    <div id="social-links" class="contact-details__social-links">
+                        <a class="contact-details__link" href="" target="_blank">
+                            <i class="fa-brands fa-linkedin fa-2xl"></i>
+                        </a>
+                        <a class="contact-details__link" href="" target="_blank">
+                            <i class="fa-brands fa-github-square fa-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-details__form" name="contactForm" action="http://localhost:3000/contact" method="POST" accept-charset="utf-8">
+                    <div class="input-group">
+                        <label class="input-group__label" for="name">Full Name<span>*</span></label>
+                        <input id="name" class="input-group__input" type="text" name="name" placeholder="Albert Morphy" pattern="[a-zA-Z-_]+" title="Only alphabetic, '-' and '_' characters are allowed and must be at least 2 characters, but no longer than 36." minlength="2" maxlength="36" required>
+                    </div>
+                    <div class="input-group">
+                        <label class="input-group__label" for="email">Email Address<span>*</span></label>
+                        <input id="email" class="input-group__input" type="email" name="email" placeholder="albert.morphy@gmail.com" pattern="(\w\.?)+@[\w\.-]+\.\w{2,}" title="Please enter a valid email address" required> 
+                    </div>
+                    <div class="input-group">
+                        <label class="input-group__label" for="company">Company</label>
+                        <input id="company" class="input-group__input" type="text" name="company" placeholder="Adobe">
+                    </div>
+                    <div class="input-group">
+                        <label class="input-group__label" for="subject">Subject<span>*</span></label>
+                        <input id="subject" class="input-group__input" type="text" name="subject" placeholder="Frontend Developer Position" minlength="2" maxlength="36" required>
+                    </div>
+                    <div class="input-group">
+                        <label class="input-group__label" for="message">Message<span>*</span></label>
+                        <textarea id="message" class="input-group__input" name="message" rows="4" placeholder="Your message here..." minlength="2" required></textarea>
+                    </div>
+                    <button class="contact-details__submit-btn" type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div>Copyright <span>&copy;</span> 2022 <span>|</span> Brindusa Melinte</div>
+    </footer>
+
+</body>
+</html>

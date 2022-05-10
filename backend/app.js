@@ -49,23 +49,19 @@ app.post(
         
         if(!errors.isEmpty()) {
             // There are errors. Render form again with sanitized values/errors messages.
-            // Error messages can be returned in an array using `errors.array()`.
-            
-            // return res.status(400).json({
-            //     success: false,
-            //     errors: errors.array()
-            // });
-
+            // const contactVal = {
+            //     name: req.body.name,
+            //     email: req.body.email,
+            //     company: req.body.company,
+            //     subject: req.body.subject,
+            //     message: req.body.message
+            // };
+            // res.render('contact', {title: 'Contact', contactVal: contactVal }) //daca incarc template-ul pt frontend din backend
+            // res.redirect('http://127.0.0.1:5500/frontend/?errors=' + JSON.stringify(errors.array())) + '&contactVal=' + JSON.stringify(contactVal);
             res.redirect('http://127.0.0.1:5500/frontend/?errors=' + JSON.stringify(errors.array()));
         } else {
             // Data from form is valid.
-
-            // res.status(200).json({
-            //     success: true,
-            //     message: 'Your message was successfully sent!'
-            // }) 
-    
-            res.redirect('http://127.0.0.1:5500/frontend/?success=Your message was successfully sent');
+            res.redirect(`http://127.0.0.1:5500/frontend/?success=Thank you ${req.body.name}. Your message was successfully sent.`);
         }
        
         console.log(req.body);

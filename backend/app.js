@@ -1,12 +1,34 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const { body, validationResult } = require('express-validator');
+const nodemailer = require('nodemailer'); 
 
 const app = express();
 const port = 3000;
 
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(bodyParser.json());
+
+const sendEmail = (contactEmail, contactCompany, contactSubject, contactMessage) => {
+    const transport = {
+        host: "0.0.0.0",
+        port: 1025,
+        secure: false, 
+        // auth: {
+        //   user: "username",
+        //   pass: "password",
+        // }
+    }
+    let transporter = nodemailer.createTransport(transport);
+
+    const data = {
+        from: contactEmail,
+        to: 'brindusa.melinte@gmail.com',
+        subject: (contactCompany ? contactCompany + ': ' : '') + contactSubject,
+        text: contactMessage
+    }
+    transporter.sendMail(data);
+};
 
 app.post(
     '/contact',
@@ -49,22 +71,12 @@ app.post(
         
         if(!errors.isEmpty()) {
             // There are errors. Render form again with sanitized values/errors messages.
-            // const contactVal = {
-            //     name: req.body.name,
-            //     email: req.body.email,
-            //     company: req.body.company,
-            //     subject: req.body.subject,
-            //     message: req.body.message
-            // };
-            // res.render('contact', {title: 'Contact', contactVal: contactVal }) //daca incarc template-ul pt frontend din backend
-            // res.redirect('http://127.0.0.1:5500/frontend/?errors=' + JSON.stringify(errors.array())) + '&contactVal=' + JSON.stringify(contactVal);
             res.redirect('http://127.0.0.1:5500/frontend/?errors=' + JSON.stringify(errors.array()));
         } else {
             // Data from form is valid.
+            sendEmail(req.body.email, req.body.company, req.body.subject, req.body.message);
             res.redirect(`http://127.0.0.1:5500/frontend/?success=Thank you ${req.body.name}. Your message was successfully sent.`);
         }
-       
-        console.log(req.body);
     }
 );
 

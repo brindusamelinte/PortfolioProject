@@ -833,6 +833,22 @@ body.dark-mode .contact-details__link {
     padding-bottom: 2rem;
 }
 
+.contact-details__submit-message {
+    margin-bottom: 4rem;
+}
+
+#submit-message {
+    font-size: 1.25rem;
+}
+
+[data-message-type="success"] {
+    color: green;
+}
+
+[data-message-type="errors"] {
+    color: var(--accent-color);
+}
+
 .contact-details__form {
    display: flex;
    flex-direction: column;

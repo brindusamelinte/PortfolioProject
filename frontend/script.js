@@ -11,6 +11,7 @@ const $lightModeBtn = document.querySelector('.switch-mode__btn--light');
 const $darkModeBtn = document.querySelector('.switch-mode__btn--dark');
 const $switchMode = document.querySelector('.switch-mode');
 
+const $submitMessage = document.querySelector('#submit-message');
 
 // Menu Event
 $menuBtn.addEventListener('click', displayMenu);
@@ -46,12 +47,28 @@ function changeMode() {
 }
 
 // Form Submit
-window.addEventListener('reload', submitFormMessage);
-function submitFormMessage() {
+// const $submitMsgData = document.querySelector('[data-message-type]');
 
+window.addEventListener('load', submitFormMessage);
+function submitFormMessage() {
+    const paramString = location.search;
+    let searchParams = new URLSearchParams(paramString);
+
+    if(searchParams.has('success')) {
+        location.hash = 'contact';
+        $submitMessage.setAttribute('data-message-type', "success");
+        $submitMessage.innerText = searchParams.get('success');
+    } else if(searchParams.has('errors')) {
+        location.hash = 'contact';
+        $submitMessage.setAttribute('data-message-type', "errors");
+        $submitMessage.innerText = 'Couldn\'t send your message! \n\n';
+        let errorArr = JSON.parse(searchParams.get('errors'));
+        errorArr.forEach(error => {
+            $submitMessage.innerText += error['msg'] + '\n';
+        });
+    }
 }
-console.log(window.location.search)
-console.log(window.location.search.indexOf('success'))
+
 
 
 

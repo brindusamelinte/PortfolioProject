@@ -1,10 +1,12 @@
+"use strict";
 const express = require('express');
 const bodyParser = require('body-parser');
 const { body, validationResult } = require('express-validator');
 const nodemailer = require('nodemailer'); 
 
 const app = express();
-const port = 3000;
+// const port = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(bodyParser.json());
@@ -80,7 +82,10 @@ app.post(
     }
 );
 
-app.listen(port, function() {
-  console.log(`Example app listening on port ${port}!`)
-});
+// app.listen(port, function() {
+//   console.log(`Example app listening on port ${port}!`)
+// });
 
+app.listen(PORT, () => {
+    console.log(`App listening on port ${PORT}!`);
+});
